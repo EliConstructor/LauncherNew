@@ -191,12 +191,13 @@ public class Bootstrap {
     }
 
     private File getUserLauncherDir() {
-        String osName = System.getProperty("os.name").toLowerCase();
+        /*String osName = System.getProperty("os.name").toLowerCase();
         if (osName.contains("win")) {
             return new File(getFileChooseDefaultDir(), getProperties().getProperty("homeFolderWindows"));
         } else {
             return new File(System.getProperty("user.home"), getProperties().getProperty("homeFolder"));
-        }
+        }*/
+        return new File(System.getProperty("user.home"), getProperties().getProperty("homeFolder"));
     }
 
     private static boolean isPortableMode() {
