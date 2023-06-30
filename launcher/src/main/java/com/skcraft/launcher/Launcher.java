@@ -326,21 +326,6 @@ public final class Launcher {
     }
 
     /**
-     * Get the news URL.
-     *
-     * @return the news URL
-     */
-    public URL getNewsURL() {
-        try {
-            return HttpRequest.url(
-                    String.format(getProperties().getProperty("newsUrl"),
-                            URLEncoder.encode(getVersion(), "UTF-8")));
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
      * Get the packages URL.
      *
      * @return the packages URL
